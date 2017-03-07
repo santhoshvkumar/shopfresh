@@ -1,0 +1,82 @@
+<ion-view view-title="Order List">
+  <ion-content>
+    <ion-list>
+    	<div ng-repeat="seleteditems in selectedFoodItems" class="card animated bounceInLeft">
+	    	<div class="row" ng-click="getSelectedStarters(seleteditems)">
+				<div class="col col-25">
+				  	<img src="{{seleteditems.img}}" width="150"/>
+				</div>
+			    <div class="col col-50">
+			    	<div class="row">
+			    		<label class="font-size">{{seleteditems.name}}</label>
+			    	</div>
+			    	<div class="row">
+			    		<label class="font-size">${{seleteditems.rate}}</label>
+			    	</div>
+			    	<div class="row">
+			    	</div>
+				</div>
+				<div class="col col-25">
+					<div class="row">
+						<div class="col col-25">
+						</div>
+						<div class="col col-50">
+						<ion-item class="item item-input">
+			    			<label ng-model="seleteditems.count" class="font-size">{{seleteditems.count}}</label>
+				            <input type="number" id="myNumber">
+				        </ion-item>
+				       </div>
+				       <div class="col col-25">
+				       </div>
+					</div>
+					<div class="row">
+						<ion-item class="item item-input padding-vertical">
+				            <button class="button" ng-click="increment(seleteditems)">+</button>
+				            <button class="button" ng-click="decrement(seleteditems)">-</button>
+			        	</ion-item>
+				    </div>
+				    <div class="row">
+			    	</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		    <div class="col">
+	            <label class="item float-right font-size" ng-model="seleteditems.RateTotal">
+			        Total: {{RateTotal}}
+			    </label>
+		    </div>
+		</div>
+	    <div class="row">
+		    <div class="col">
+		    	<div class="card cashsale" ng-click="goHome()">
+		            <label class="item cashsale orderButtons ordelLabels">
+				        <b>Cash Sale</b>
+				    </label>
+	        	</div>
+		    </div>
+		    <div class="col">
+		    	<div class="card changecardcomplimentary" ng-click="goHome()">
+			        <label class="item changecardcomplimentary orderButtons ordelLabels"><b>Charge Card</b>
+					</label>
+		        </div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col">
+		    	<div class="card changecardcomplimentary" ng-click="goHome()">
+			        <label class="item changecardcomplimentary orderButtons ordelLabels"><b>Complimentary</b>
+					</label>
+		        </div>
+		    </div>
+		    <div class="col">
+		    	<div class="card cancel" ng-click="goHome()">
+		          	<label class="item cancel orderButtons ordelLabels"><b>Cancel</b>
+					</label>
+		        </div>
+		    </div>
+		</div>
+	    
+	</ion-list>
+  </ion-content>
+</ion-view>

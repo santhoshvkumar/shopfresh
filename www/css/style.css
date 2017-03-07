@@ -1,0 +1,170 @@
+/* Empty. Add your own CSS if you like */
+.homeContents{
+	margin-top: 3% !important;
+}
+
+.homelogo{
+	width: 100%;
+	margin-bottom: 30% !important;
+}
+.dishContents{
+	margin-top: 100% !important;
+}
+
+.dishesLogo{
+	width: 105%;
+    margin-top: -28px;
+    margin-left: -12px;
+}
+
+.myBackground{
+	border: 10px solid #f9a136;
+	background-color: #f9a136;
+}
+.columnBg{
+	margin-top: -17px;
+	border: 10px solid #9d7d41;
+	background-color: #fff8c9;
+
+}
+.dishIcon{
+	width: 40px;
+}
+.bar.bar-balanced{
+	border-color: #9d7d41;
+    background-color: #9d7d41;
+}
+
+.footTab{
+	
+	height: 46px;
+    width: 314px;
+    margin-left: 677px;
+    margin-bottom:14px;
+}
+
+.titleSize{
+	font-size: 25px;
+	font-family: cursive;
+}
+
+.homebuttons{
+	width: 100%;
+	margin-bottom: 10% !important;
+}
+
+.orderButtons{
+	margin-bottom: 30px !important;
+}
+
+.ordelLabels{
+	text-align: center;
+	font-size: 25px;
+}
+
+.float-right{
+	float: right;
+}
+
+.font-size{
+	font-size: 20px;
+}
+
+.background-image {
+    background-image: url("../img/bg.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.cancel{
+  background: red !important;
+}
+.cashsale{
+	background: blue !important;
+}
+.changecardcomplimentary{
+	background: green !important;
+}
+
+.tab-item{
+	max-width: 100px !important;
+	font-size: : 20px !important;
+}
+
+.tabs{
+	width: 65% !important;
+}
+.alignRight{
+	text-align: right;
+}
+.alignLeft{
+	text-align: left;
+}
+.alignCenter{
+	text-align: center;
+}
+.dishBackground{
+	background-color: #fff8c9;
+}
+.listAlign{
+	text-align: right;
+}
+.listBackground{
+	background-color: #f9a136;
+}
+
+.tabs-striped.tabs-background-positive .tabs {
+	background-color: #f9a136;
+}
+
+.button.button-assertive {
+    border-color: #9d7d41;
+    border-width:3px;
+    background-color: #f9a136;
+    color: #fff;
+    border-radius: 25px 25px 25px 25px;
+
+}
+
+.topIcon{
+	margin-left:67%;
+	background-color: #9d7d41;
+    color: #fff;
+
+}
+
+.addIcon{
+	padding: 5px;
+    font-size: 25px;
+}
+
+.shoppingitemview{
+    padding: 0px;
+    font-size: 58px;
+    margin-top: -5px;
+}
+
+button.tabIcon{
+    border-color: #9d7d41 ;
+   border-width: 3px;
+   background-color: #f9a136 ;
+   color: #fff;
+   border-radius: 10px 10px 10px 10px;
+   border-bottom-color: #f9a136 ;
+   width: 200px;
+   text-align: -webkit-center;
+   font-size: 26px;
+   font-family: cursive;
+   font-weight: bolder;
+   box-shadow: inset 0px 8px 3px -3px rgb(255, 255, 255);
+}
+.rightBackground{
+	background-color: #fff8c9;
+	padding: 19px;
+	border-top-right-radius: 15px;
+}
+./*body{
+	font-family: 'eds market regulars slant';
+}*/
+
+

@@ -1,0 +1,167 @@
+<ion-view hide-nav-bar="true">
+
+  <ion-content class="myBackground">
+    <div class="row">
+      <div class = "col col-63 dishBackground" style="border-top-left-radius: 15px;">
+          <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+                <div class="tabs">
+                <div class="col dishBackground"><button class="button tabIcon" ng-click="hotdogs()" ng-style="hotdogstyle">
+                   HOT DOGS</button>
+                </div>
+                <div class="col dishBackground"><button class="button tabIcon" ng-click="sausages()" ng-style="sausagestyle">
+                   SAUSAGES</button>
+                </div>
+                <div class="col dishBackground"><button class="button tabIcon" ng-click="etcs()" ng-style="etcstyle">
+                   ETC</button>
+                </div>
+                 
+              </div>
+          </div>
+      </div>
+      <div class="col col-33 rightBackground">
+          <div class="col rightBackground">
+            <span style="font-size: 35px;padding: 16px;color: orange;font-weight: bolder;font-family: cursive;">Total Orders</span>
+          </div>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col col-63 dishBackground">
+          
+          <div class="disheslogo">
+            
+            <img ng-src="img/hotdogs.png" ng-if="tab=='HOT DOGS'" class="dishesLogo "/>
+            <img ng-src="img/sausages.png" ng-if="tab=='SAUSAGES'"class="dishesLogo"/>
+            <img ng-src="img/etc.png" ng-if="tab=='ETC'"  class="dishesLogo"/>
+
+          </div>
+
+          <div class="homeContents">
+          <ul class="listAlign" >
+            <ion-list ng-if="tab=='HOT DOGS'">
+              <div ng-repeat="hotdogs in hotdogslists" style="border-bottom:1px solid #f9a136;">
+                <div class="row">
+                  <div class="col col-50 font-size">
+                    {{hotdogs.name}}
+                  </div>
+                  <div class="col col-25 font-size" ng-click="getSelectedHotdogs(hotdogs,$index,hotdogs.rate1)">
+                    ${{hotdogs.rate1}}
+                  </div>
+                  <div class="col col-25 font-size" ng-click="getSelectedHotdogs(hotdogs,$index,hotdogs.rate2)">
+                    ${{hotdogs.rate2}}
+                  </div>
+                </div>
+              </div>
+            </ion-list>
+          </ul>
+          </div>
+          <div class="homeContents">
+            <ul class="listAlign" >
+              <ion-list ng-if="tab=='SAUSAGES'">
+              <div ng-repeat="sausages in sausageslists" style="border-bottom:1px solid #f9a136;">
+                <div class="row">
+                  <div class="col col-50 font-size">
+                    {{sausages.name}}
+                  </div>
+                  <div class="col col-25 font-size" ng-click="getSelectedSausages(sausages,$index,sausages.rate1)">
+                    ${{sausages.rate1}}
+                  </div>
+                  <div class="col col-25 font-size" ng-click="getSelectedSausages(sausages,$index,sausages.rate2)">
+                    ${{sausages.rate2}}
+                  </div>
+                </div>
+              </div>
+            </ion-list>
+            </ul>
+          </div>
+          <div class="homeContents">
+            <ul class="listAlign" >
+              <ion-list ng-if="tab=='ETC'">
+              <div ng-repeat="etc in etclists" style="border-bottom:1px solid #f9a136;">
+                <div class="row">
+                  <div class="col col-50 font-size">
+                    {{etc.name}}
+                  </div>
+                  <div class="col col-25 font-size" ng-click="getSelectedEtc(etc,$index,etc.rate1)">
+                    ${{etc.rate1}}
+                  </div>
+                  <div class="col col-25 font-size" ng-click="getSelectedEtc(etc,$index,etc.rate2)">
+                    ${{etc.rate2}}
+                  </div>
+                </div>
+              </div>
+            </ion-list>
+            </ul>
+          </div>
+      </div>
+
+    <div class="col col-33 columnBg">
+      
+      <div class="homeContents ">
+         
+        
+        <div class="row" style="background-color: #9d7d41 ;margin-top: -16px;width: 110%;
+           margin-left: -16px;">
+         <img ng-src="img/kart.png" style="height: 30px;margin-top: 5%;margin-left: 3%;"/>
+         <div class="col">
+         </div>
+         <div class="col"><button style="background-color: #fff8c9 ;border-radius: 25px 25px 25px 25px;color: #9d7d41 ;width:180%; height:80%; margin-left:-62%;font-family: cursive;font-weight: bolder;font-size: medium;">
+       {{selectedFoodItems.length}} Items</button></div>
+         <div class="col">
+         </div>
+         <div class="col" style="font-family:cursive;
+           font-weight: bolder;color:#FFF9C9 ;font-size: large">
+             <div class="row">Total
+             </div>
+             <div class="row" style="margin-top: 3px;font-size: large" ng-model="seleteditems.RateTotal">${{RateTotal}}
+             </div>
+           </div>
+       </div>
+        </div>
+        <ion-scroll zooming="true" direction="xy" style="height: 300px">
+         
+         <div class="row" ng-repeat="seleteditems in selectedFoodItems" style="border-bottom:1px solid #f9a136;">
+          <div class="col col-20 font-size">
+            <img class= "dishIcon" ng-src="img/dish.png">
+          </div>
+          <div class="col col-50 font-size" >
+            <div class="row">{{seleteditems.name}}
+            </div>
+            <div class="row" style="color:red">{{seleteditems.rateSelected}}
+            </div>
+          </div>
+
+          <div class="col col-33">
+            <div class="row">
+            </div>
+            <div class="row" >
+              <div class="col col-50 addIcon ion-plus-circled" style="color:#f9a136" ng-click="addclick(seleteditems)"></div>
+              <div class="font-size">{{seleteditems.count}}</div>
+              <div class="col col-50 addIcon ion-minus-circled" style="color:#f9a136" ng-click="minusclick(seleteditems)"></div>
+            </div>
+          </div>
+        </div>
+        </ion-scroll>
+        
+      
+
+      <div class= "row">
+        <div class="col"><button class="button button-assertive buttonComplementary" ng-click="homeredirect()">
+        CASH SALE</button></div>
+        <div class="col"><button class="button button-assertive buttonComplementary" ng-click="homeredirect()">
+        CHARGE CARD</button></div>
+      </div>
+
+      <div class= "row">
+        <div class="col"><button class="button button-assertive" ng-click="homeredirect()">
+        COMPLEMENTARY</button></div>
+        <div class="col"><button class="button button-assertive" ng-click="homeredirect()">
+        CANCEL</button></div>
+      </div>
+    </div>
+    
+    <div class="footTab bar bar-footer bar-balanced">
+      <div class="title">TRANSACTION COMPLETE ?</div>
+    </div>
+    
+  </ion-content> 
+</ion-view>
